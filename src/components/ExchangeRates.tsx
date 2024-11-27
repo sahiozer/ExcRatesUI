@@ -22,7 +22,7 @@ const ExchangeRates: React.FC = () => {
         
         // Directly set the response data since it's an array
         if (response.data) {
-          setRates(response.data); // No need to look for `response.data.rates`
+          setRates(response.data);
         } else {
           setError('No data received.');
         }
