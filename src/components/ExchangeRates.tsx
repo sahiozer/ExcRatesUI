@@ -19,8 +19,6 @@ const ExchangeRates: React.FC = () => {
     const fetchRates = async () => {
       try {
         const response = await API.get<Rate[]>('/exchange/rates');
-        
-        // Directly set the response data since it's an array
         if (response.data) {
           setRates(response.data);
         } else {
