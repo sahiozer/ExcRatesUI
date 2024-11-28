@@ -11,14 +11,14 @@ interface RatesResponse {
   rates: Rate[];
 }
 
-const ExchangeRates: React.FC = () => {
+const SilverRates: React.FC = () => {
   const [rates, setRates] = useState<Rate[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await API.get<Rate[]>('/exchange/rates');
+        const response = await API.get<Rate[]>('/silver/rates');
         if (response.data) {
           setRates(response.data);
         } else {
@@ -40,13 +40,13 @@ const ExchangeRates: React.FC = () => {
 
   return (
     <div>
-      <h1>Exchange Rates</h1>
+      <h1>Exchange Rates - Silver Price</h1>
       <table border={1} style={{ width: '100%', textAlign: 'center' }}>
         <thead>
           <tr>
             <th>Bank Name</th>
-            <th>Gold Buying Rate</th>
-            <th>Gold Selling Rate</th>
+            <th>Silver Buying Rate</th>
+            <th>Silver Selling Rate</th>
           </tr>
         </thead>
         <tbody>
@@ -69,4 +69,4 @@ const ExchangeRates: React.FC = () => {
   );
 };
 
-export default ExchangeRates;
+export default SilverRates;

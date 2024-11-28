@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import ExchangeRates from './components/ExchangeRates';
+import GoldRates from './components/GoldRates';
+import SilverRates from './components/SilverRates';
 
 function App() {
   return (
     <div>
-      <ExchangeRates />
+      <GoldRates />
+      <SilverRates />
     </div>
   );
 }

@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8080/api/gold',
+  baseURL: 'http://localhost:8080/api/exchange',
 });
 
-export default API; // Export the API instance
+export default API;
